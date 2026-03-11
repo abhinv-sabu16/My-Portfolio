@@ -96,7 +96,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className="hidden sm:block">
-            <p className="font-display font-bold text-sm text-[#e8e4df] leading-none tracking-wide">Dev.Portfolio</p>
+            <p className="font-display font-bold text-sm text-[#e8e4df] leading-none tracking-wide">Abhinav Sabu</p>
             <p className="font-mono text-xs text-secondary opacity-70 mt-0.5" ref={timeRef}>--:--:--</p>
           </div>
         </div>

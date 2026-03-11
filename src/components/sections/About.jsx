@@ -64,9 +64,9 @@ export default function About() {
                     style={{ background: 'linear-gradient(135deg, rgba(28,31,36,0.8) 0%, rgba(28,31,36,0.4) 100%)' }}
                   >
                     <div className="w-28 h-28 rounded-full border-4 border-primary/30 flex items-center justify-center bg-primary/50">
-                      <span className="font-display font-black text-secondary text-5xl">J</span>
+                      <span className="font-display font-black text-secondary text-5xl"></span>
                     </div>
-                    <p className="font-body text-primary/60 text-sm">Replace with your photo</p>
+                    <p className="font-body text-primary/60 text-sm"></p>
                   </div>
                 </div>
                 {/* Overlay gradient */}

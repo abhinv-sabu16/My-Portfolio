@@ -64,7 +64,7 @@ export default function Footer() {
                 <span className="font-display font-black text-secondary text-lg">Ø</span>
               </div>
               <div>
-                <p className="font-display font-bold text-lg text-primary leading-none">Dev.Portfolio</p>
+                <p className="font-display font-bold text-lg text-primary leading-none">Abhinav Sabu</p>
                 <p className="font-mono text-xs text-primary/60 mt-0.5">Full Stack Developer</p>
               </div>
             </div>
@@ -102,14 +102,14 @@ export default function Footer() {
           <div className="md:col-span-3">
             <h4 className="font-mono text-xs text-primary/40 uppercase tracking-widest mb-5">Get In Touch</h4>
             <a
-              href="mailto:hello@devportfolio.com"
+              href="mailto:abhinavsabu22@gmail.com"
               className="font-display text-xl font-bold text-primary hover:text-primary/70 transition-colors block mb-4"
             >
-              hello@devportfolio.com
+              abhinavsabu22@gmail.com
             </a>
-            <p className="font-body text-sm text-primary/60 mb-6">Based in <span className="font-medium text-primary">San Francisco, CA</span></p>
+            <p className="font-body text-sm text-primary/60 mb-6">Based in <span className="font-medium text-primary">Kochi, Kerala</span></p>
             {/* Social icons */}
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2">
               {['GH', 'LI', 'TW', 'DR'].map((icon) => (
                 <a
                   key={icon}
@@ -119,7 +119,7 @@ export default function Footer() {
                   {icon}
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -141,7 +141,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="font-mono text-xs text-primary/40">
-            © {new Date().getFullYear()} Dev.Portfolio — Designed & Built with precision
+            © {new Date().getFullYear()} Abhinav Sabu — Designed & Built with precision
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="font-mono text-xs text-primary/40 hover:text-primary/70 transition-colors">Privacy</a>

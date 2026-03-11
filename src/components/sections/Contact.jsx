@@ -90,10 +90,10 @@ export default function Contact() {
 
             <div className="space-y-5">
               {[
-                { icon: '✉', label: 'Email', value: 'hello@devportfolio.com', href: 'mailto:hello@devportfolio.com' },
+                { icon: '✉', label: 'Email', value: 'abhinavsabu22@gmail.com', href: 'mailto:abhinavsabu22@gmail.com' },
                 { icon: '💼', label: 'LinkedIn', value: '/in/devportfolio', href: '#' },
                 { icon: '🐙', label: 'GitHub', value: 'github.com/devportfolio', href: '#' },
-                { icon: '📍', label: 'Location', value: 'San Francisco, CA', href: null },
+                { icon: '📍', label: 'Location', value: 'Kochi, Kerala', href: null },
               ].map(({ icon, label, value, href }) => (
                 <div key={label} className="flex items-center gap-4 group">
                   <div className="w-10 h-10 rounded-full bg-secondary/10 border border-secondary/20 flex items-center justify-center text-base flex-shrink-0">
