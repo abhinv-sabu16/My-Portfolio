@@ -27,7 +27,13 @@ body {
   color: #e8e4df;
   font-family: var(--font-body);
   overflow-x: hidden;
-  cursor: none;
+  cursor: auto;
+}
+
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
 }
 
 /* Custom Cursor */

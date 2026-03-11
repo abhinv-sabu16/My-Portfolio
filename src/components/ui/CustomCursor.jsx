@@ -7,6 +7,18 @@ export default function CustomCursor() {
   const outlineRef = useRef(null)
 
   useEffect(() => {
+    // Check if touch device — if so, hide and do nothing
+    const isTouchDevice = () =>
+      window.matchMedia('(pointer: coarse)').matches ||
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints > 0
+
+    if (isTouchDevice()) {
+      if (dotRef.current) dotRef.current.style.display = 'none'
+      if (outlineRef.current) outlineRef.current.style.display = 'none'
+      return
+    }
+
     const dot = dotRef.current
     const outline = outlineRef.current
     let mouseX = 0, mouseY = 0
