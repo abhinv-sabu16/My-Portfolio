@@ -4,9 +4,9 @@ import { gsap } from 'gsap'
 import Link from 'next/link'
 
 const navLinks = [
-  { label: 'Work', href: '#projects' },
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Projects', href: '#projects' },
   { label: 'Blog', href: '#blog' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -46,19 +46,40 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 80)
-      // Active section detection
+      
       const sections = navLinks.map(l => l.href.replace('#', ''))
-      for (const id of sections.reverse()) {
+      let maxVisibleArea = 0
+      let currentActive = active
+
+      for (let i = 0; i < sections.length; i++) {
+        const id = sections[i]
         const el = document.getElementById(id)
-        if (el && window.scrollY >= el.offsetTop - 120) {
-          setActive(id)
-          break
+        if (el) {
+          const rect = el.getBoundingClientRect()
+          const windowHeight = window.innerHeight || document.documentElement.clientHeight
+          
+          // Calculate how much of the section is visible in the viewport
+          const visibleTop = Math.max(0, rect.top)
+          const visibleBottom = Math.min(windowHeight, rect.bottom)
+          const visibleHeight = Math.max(0, visibleBottom - visibleTop)
+          
+          if (visibleHeight > maxVisibleArea) {
+            maxVisibleArea = visibleHeight
+            currentActive = id
+          }
         }
       }
+      
+      if (currentActive && currentActive !== active) {
+        setActive(currentActive)
+      }
     }
-    window.addEventListener('scroll', handleScroll)
+    
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+    
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [active])
 
   // Mobile menu animation
   useEffect(() => {
@@ -95,7 +116,7 @@ export default function Navbar() {
               <span className="font-display font-black text-primary text-sm leading-none">Ø</span>
             </div>
           </div>
-          <div className="hidden sm:block">
+          <div className="block">
             <p className="font-display font-bold text-sm text-[#e8e4df] leading-none tracking-wide">Abhinav Sabu</p>
             <p className="font-mono text-xs text-secondary opacity-70 mt-0.5" ref={timeRef}>--:--:--</p>
           </div>

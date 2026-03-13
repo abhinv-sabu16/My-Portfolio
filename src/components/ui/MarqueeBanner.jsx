@@ -8,12 +8,20 @@ const items = [
 
 export default function MarqueeBanner({ dark = true }) {
   return (
-    <div className={`py-5 overflow-hidden border-y ${dark ? 'border-white/5 bg-white/2' : 'border-primary/10 bg-primary/5'}`}>
-      <div className="marquee-track">
-        {[...items, ...items].map((item, i) => (
+    <div className={`py-5 overflow-hidden border-y group ${dark ? 'border-white/5 bg-white/[0.02]' : 'border-primary/10 bg-primary/[0.05]'}`}>
+      <div 
+        className="group-hover:![animation-play-state:paused]"
+        style={{
+        display: 'flex',
+        width: 'max-content',
+        animation: 'marquee 40s linear infinite',
+        whiteSpace: 'nowrap',
+      }}>
+        {[...items, ...items, ...items].map((item, i) => (
           <span
             key={i}
-            className={`inline-block font-mono text-sm uppercase tracking-widest mx-4 ${
+            style={{ display: 'inline-block', margin: '0 16px' }}
+            className={`font-mono text-sm uppercase tracking-widest ${
               item === '✦'
                 ? 'text-secondary'
                 : dark ? 'text-white/20' : 'text-primary/30'

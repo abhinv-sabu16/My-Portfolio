@@ -53,8 +53,6 @@ export default function Home() {
 
           <About />
 
-          <MarqueeBanner dark={false} />
-
           <Skills />
 
           <Projects />

@@ -134,7 +134,7 @@ export default function Projects({ notionProjects }) {
               className="font-display font-black text-[#e8e4df]"
               style={{ fontSize: 'clamp(2rem, 5vw, 4rem)', lineHeight: 1.05 }}
             >
-              Selected <em className="text-secondary">Work</em>
+              Selected <em className="text-secondary">Projects</em>
             </h2>
           </div>
           {notionProjects ? (
