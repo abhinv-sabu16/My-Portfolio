@@ -105,32 +105,32 @@ export default function Blog({ notionPosts }) {
             <article
               key={post.id}
               ref={el => cardsRef.current[i] = el}
-              className="group p-7 rounded-2xl bg-primary/5 border border-primary/10 hover:bg-primary/8 hover:border-primary/20 transition-all duration-300 cursor-pointer"
+              className="group p-7 rounded-2xl bg-primary border border-secondary/20 hover:bg-primary/95 hover:border-secondary/40 transition-all duration-300 cursor-pointer shadow-lg"
             >
               {/* Tag */}
-              <span className="inline-block px-3 py-1 rounded-full bg-primary/10 font-mono text-xs text-primary/60 mb-5">
+              <span className="inline-block px-3 py-1 rounded-full bg-secondary/10 font-mono text-xs text-secondary/70 mb-5">
                 {post.tag}
               </span>
 
               {/* Title */}
-              <h3 className="font-display font-bold text-primary text-xl leading-tight mb-3 group-hover:text-primary/80 transition-colors">
+              <h3 className="font-display font-bold text-secondary text-xl leading-tight mb-3 group-hover:text-secondary/90 transition-colors">
                 {post.title}
               </h3>
 
-              <p className="font-body text-primary/50 text-sm leading-relaxed mb-6">
+              <p className="font-body text-secondary/60 text-sm leading-relaxed mb-6">
                 {post.excerpt}
               </p>
 
               {/* Meta */}
-              <div className="flex items-center justify-between pt-4 border-t border-primary/10">
+              <div className="flex items-center justify-between pt-4 border-t border-secondary/20">
                 <div className="flex items-center gap-3">
-                  <span className="font-mono text-xs text-primary/30">{post.date}</span>
-                  <span className="text-primary/20">·</span>
-                  <span className="font-mono text-xs text-primary/30">{post.readTime} read</span>
+                  <span className="font-mono text-xs text-secondary/50">{post.date}</span>
+                  <span className="text-secondary/30">·</span>
+                  <span className="font-mono text-xs text-secondary/50">{post.readTime} read</span>
                 </div>
                 <a
                   href={post.slug}
-                  className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary/50 group-hover:bg-primary group-hover:text-secondary transition-all duration-300"
+                  className="w-8 h-8 rounded-full bg-secondary text-primary flex items-center justify-center group-hover:bg-secondary/90 transition-all duration-300"
                 >
                   →
                 </a>

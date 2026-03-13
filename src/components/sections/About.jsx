@@ -129,11 +129,11 @@ export default function About() {
                 { icon: '🔐', title: 'Security', desc: 'Built to be trusted' },
                 { icon: '📐', title: 'Architecture', desc: 'Scalable by design' },
               ].map(({ icon, title, desc }) => (
-                <div key={title} className="flex items-start gap-3 p-4 rounded-xl bg-primary/8 border border-primary/10 hover:bg-primary/12 transition-colors">
+                <div key={title} className="flex items-start gap-3 p-4 rounded-xl bg-primary border border-secondary/20 hover:bg-primary/95 hover:border-secondary/40 transition-colors shadow-lg">
                   <span className="text-xl">{icon}</span>
                   <div>
-                    <p className="font-body font-semibold text-primary text-sm">{title}</p>
-                    <p className="font-body text-primary/50 text-xs mt-0.5">{desc}</p>
+                    <p className="font-body font-semibold text-secondary text-sm">{title}</p>
+                    <p className="font-body text-secondary/70 text-xs mt-0.5">{desc}</p>
                   </div>
                 </div>
               ))}
