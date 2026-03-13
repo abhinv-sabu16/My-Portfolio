@@ -190,7 +190,6 @@ export default function Navbar() {
                 className="flex items-center justify-between px-4 py-3 rounded-xl text-[#e8e4df]/80 hover:text-[#e8e4df] hover:bg-secondary/10 font-body text-base font-medium transition-all text-left"
               >
                 <span>{label}</span>
-                <span className="text-secondary text-xs font-mono">{href}</span>
               </button>
             ))}
           </div>
