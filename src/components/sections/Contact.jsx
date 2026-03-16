@@ -91,8 +91,8 @@ export default function Contact() {
             <div className="space-y-5">
               {[
                 { icon: '✉', label: 'Email', value: 'abhinavsabu22@gmail.com', href: 'mailto:abhinavsabu22@gmail.com' },
-                { icon: '💼', label: 'LinkedIn', value: '/in/devportfolio', href: '#' },
-                { icon: '🐙', label: 'GitHub', value: 'github.com/devportfolio', href: '#' },
+                { icon: '💼', label: 'LinkedIn', value: '/in/abhinav-sabu-921b98346/', href: 'https://www.linkedin.com/in/abhinav-sabu-921b98346/' },
+                { icon: '🐙', label: 'GitHub', value: 'github.com/abhinv-sabu16', href: 'https://github.com/abhinv-sabu16' },
                 { icon: '📍', label: 'Location', value: 'Kochi, Kerala', href: null },
               ].map(({ icon, label, value, href }) => (
                 <div key={label} className="flex items-center gap-4 group">
