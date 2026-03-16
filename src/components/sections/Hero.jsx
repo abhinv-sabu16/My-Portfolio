@@ -166,7 +166,7 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 ref={headlineRef} className="font-display font-black leading-[0.9] mb-8 overflow-hidden">
-            {['Crafting', 'Digital', 'Experiences', 'That Matter'].map((word, i) => (
+            {['Code.', 'Create.', 'Innovate.'].map((word, i) => (
               <span key={word} className="block overflow-hidden">
                 <span
                   className={`word inline-block ${i % 2 !== 0 ? 'ml-[clamp(20px,5vw,80px)] text-secondary' : ''}`}

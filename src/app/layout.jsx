@@ -25,11 +25,11 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata = {
   title: 'Portfolio | Full Stack Developer',
-  description: 'Full Stack Developer specializing in Next.js & Node.js — crafting digital experiences that matter.',
+  description: 'Full Stack Developer specializing in Next.js & Node.js — Code. Create. Innovate.',
   keywords: ['Full Stack', 'Next.js', 'Node.js', 'Developer', 'Portfolio', 'React', 'MongoDB'],
   openGraph: {
     title: 'Portfolio | Full Stack Developer',
-    description: 'Full Stack Developer crafting digital experiences that matter.',
+    description: 'Full Stack Developer. Code. Create. Innovate.',
     type: 'website',
   },
 }

@@ -151,7 +151,7 @@ export default function Projects({ notionProjects }) {
             <button
               key={opt}
               onClick={() => setFilter(opt)}
-              className={`px-4 py-1.5 rounded-full font-mono text-xs transition-all duration-300 ${
+              className={`px-4 py-1.5 rounded-full font-mono text-xs transition-all duration-500 ${
                 filter === opt
                   ? 'bg-secondary text-primary font-semibold'
                   : 'border border-white/10 text-white/40 hover:border-white/30 hover:text-white/70'
@@ -244,7 +244,7 @@ export default function Projects({ notionProjects }) {
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-white/10 rounded-full font-body text-sm text-white/40 hover:border-secondary/40 hover:text-white/70 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-white/10 rounded-full font-body text-sm text-white/40 hover:border-secondary/40 hover:text-white/70 transition-all duration-500"
           >
             View All Projects on GitHub ↗
           </a>

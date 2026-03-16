@@ -105,7 +105,7 @@ export default function Blog({ notionPosts }) {
             <article
               key={post.id}
               ref={el => cardsRef.current[i] = el}
-              className="group p-7 rounded-2xl bg-primary border border-secondary/20 hover:bg-primary/95 hover:border-secondary/40 transition-all duration-300 cursor-pointer shadow-lg"
+              className="group p-7 rounded-2xl bg-primary border border-secondary/20 hover:bg-primary/95 hover:border-secondary/40 transition-all duration-500 cursor-pointer shadow-lg"
             >
               {/* Tag */}
               <span className="inline-block px-3 py-1 rounded-full bg-secondary/10 font-mono text-xs text-secondary/70 mb-5">
@@ -130,7 +130,7 @@ export default function Blog({ notionPosts }) {
                 </div>
                 <a
                   href={post.slug}
-                  className="w-8 h-8 rounded-full bg-secondary text-primary flex items-center justify-center group-hover:bg-secondary/90 transition-all duration-300"
+                  className="w-8 h-8 rounded-full bg-secondary text-primary flex items-center justify-center group-hover:bg-secondary/90 transition-all duration-500"
                 >
                   →
                 </a>

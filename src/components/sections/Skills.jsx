@@ -149,7 +149,7 @@ export default function Skills() {
               { icon: '⭐', label: 'GitHub Stars', value: '500+', sub: 'earned' },
               { icon: '📦', label: 'npm Packages', value: '12', sub: 'published' },
             ].map(({ icon, label, value, sub }) => (
-              <div key={label} className="flex items-center gap-4 p-4 rounded-xl bg-white/3 border border-white/5 hover:border-secondary/30 transition-all group">
+              <div key={label} className="flex items-center gap-4 p-4 rounded-xl bg-white/3 border border-white/5 hover:border-secondary/30 transition-all duration-500 group">
                 <span className="text-2xl">{icon}</span>
                 <div className="flex-1">
                   <p className="font-body text-white/50 text-xs">{label}</p>
@@ -167,7 +167,7 @@ export default function Skills() {
             <div
               key={title}
               ref={el => cardsRef.current[i] = el}
-              className="p-6 rounded-2xl border border-white/6 bg-white/2 hover:border-secondary/30 hover:bg-white/4 transition-all duration-300 group"
+              className="p-6 rounded-2xl border border-white/6 bg-white/2 hover:border-secondary/30 hover:bg-white/4 transition-all duration-500 group"
             >
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-secondary text-xl font-mono">{icon}</span>

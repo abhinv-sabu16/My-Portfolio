@@ -129,7 +129,7 @@ export default function About() {
                 { icon: '🔐', title: 'Security', desc: 'Built to be trusted' },
                 { icon: '📐', title: 'Architecture', desc: 'Scalable by design' },
               ].map(({ icon, title, desc }) => (
-                <div key={title} className="flex items-start gap-3 p-4 rounded-xl bg-primary border border-secondary/20 hover:bg-primary/95 hover:border-secondary/40 transition-colors shadow-lg">
+                <div key={title} className="flex items-start gap-3 p-4 rounded-xl bg-primary border border-secondary/20 hover:bg-primary/95 hover:border-secondary/40 transition-all duration-500 shadow-lg">
                   <span className="text-xl">{icon}</span>
                   <div>
                     <p className="font-body font-semibold text-secondary text-sm">{title}</p>
@@ -141,7 +141,7 @@ export default function About() {
 
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="inline-flex items-center gap-3 px-6 py-3 bg-primary text-secondary font-body font-semibold rounded-full hover:bg-primary/90 transition-all duration-300 group"
+              className="inline-flex items-center gap-3 px-6 py-3 bg-primary text-secondary font-body font-semibold rounded-full hover:bg-primary/90 transition-all duration-500 group"
             >
               Let&apos;s Talk
               <span className="group-hover:translate-x-1 transition-transform">→</span>
