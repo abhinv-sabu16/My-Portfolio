@@ -2,6 +2,11 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import {
+  SiNextdotjs, SiNodedotjs, SiMongodb, SiTypescript,
+  SiReact, SiTailwindcss, SiDocker, SiPostgresql,
+  SiRedis, SiGraphql, SiFirebase, SiVercel
+} from 'react-icons/si'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -11,22 +16,30 @@ const skillCategories = [
   {
     title: 'Frontend',
     icon: '◈',
-    skills: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'GSAP', 'Framer Motion', 'Three.js', 'Redux'],
+    skills: [
+      { name: 'Next.js', logo: <SiNextdotjs /> },
+      { name: 'React', logo: <SiReact /> },
+      { name: 'Tailwind CSS', logo: <SiTailwindcss /> },
+    ],
   },
   {
     title: 'Backend',
     icon: '⬡',
-    skills: ['Node.js', 'Express', 'NestJS', 'REST APIs', 'GraphQL', 'WebSockets', 'JWT Auth', 'Microservices'],
+    skills: [
+      { name: 'Node.js', logo: <SiNodedotjs /> },
+      { name: 'GraphQL', logo: <SiGraphql /> },
+      { name: 'Firebase', logo: <SiFirebase /> },
+      { name: 'Vercel', logo: <SiVercel /> },
+    ],
   },
   {
     title: 'Database',
     icon: '⬢',
-    skills: ['MongoDB', 'PostgreSQL', 'Redis', 'Prisma', 'Mongoose', 'Supabase', 'Firebase', 'SQL'],
-  },
-  {
-    title: 'DevOps & Tools',
-    icon: '◎',
-    skills: ['Docker', 'AWS', 'Vercel', 'CI/CD', 'GitHub Actions', 'Linux', 'Nginx', 'Notion API'],
+    skills: [
+      { name: 'PostgreSQL', logo: <SiPostgresql /> },
+      { name: 'Redis', logo: <SiRedis /> },
+      { name: 'Docker', logo: <SiDocker /> },
+    ],
   },
 ]
 
@@ -162,24 +175,25 @@ export default function Skills() {
         </div>
 
         {/* Skill category cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {skillCategories.map(({ title, icon, skills }, i) => (
             <div
               key={title}
               ref={el => cardsRef.current[i] = el}
-              className="p-6 rounded-2xl border border-white/6 bg-white/2 hover:border-secondary/30 hover:bg-white/4 transition-all duration-500 group"
+              className="p-8 rounded-2xl border border-white/6 bg-white/2 hover:border-secondary/30 hover:bg-white/4 transition-all duration-500 group"
             >
-              <div className="flex items-center gap-3 mb-5">
-                <span className="text-secondary text-xl font-mono">{icon}</span>
-                <h3 className="font-display font-bold text-[#e8e4df] text-base">{title}</h3>
+              <div className="flex items-center gap-3 mb-6">
+                <span className="text-secondary text-2xl font-mono">{icon}</span>
+                <h3 className="font-display font-bold text-[#e8e4df] text-lg">{title}</h3>
               </div>
               <div className="flex flex-wrap gap-2">
                 {skills.map(skill => (
                   <span
-                    key={skill}
-                    className="skill-pill px-2.5 py-1 rounded-full font-mono text-xs text-white/50 cursor-default"
+                    key={skill.name}
+                    className="skill-pill flex items-center gap-2 px-4 py-2 rounded-full font-mono text-sm text-white/50 cursor-default"
                   >
-                    {skill}
+                    <span className="text-secondary text-lg">{skill.logo}</span>
+                    {skill.name}
                   </span>
                 ))}
               </div>

@@ -23,11 +23,11 @@ const fallbackProjects = [
   {
     id: '2',
     title: 'AI Content Generator',
-    description: 'SaaS platform leveraging OpenAI APIs to generate marketing copy, blog posts, and social media content.',
-    tech: ['Next.js', 'OpenAI', 'PostgreSQL', 'Tailwind'],
+    description: 'SaaS platform leveraging Grok APIs to generate marketing copy, blog posts, and social media content.',
+    tech: ['React.js', 'Grok', 'MongoDB', 'RAG', 'Tailwind', 'Node.js', 'Express.js'],
     category: 'AI / SaaS',
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://content-ai-abhinav-sabus-projects.vercel.app/',
+    githubUrl: 'https://github.com/abhinv-sabu16/Content-Ai',
     featured: true,
     accent: '#4A8FC9',
   },
@@ -241,7 +241,7 @@ export default function Projects({ notionProjects }) {
         {/* View all */}
         <div className="text-center mt-12">
           <a
-            href="https://github.com"
+            href="https://github.com/abhinv-sabu16"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 border border-white/10 rounded-full font-body text-sm text-white/40 hover:border-secondary/40 hover:text-white/70 transition-all duration-500"

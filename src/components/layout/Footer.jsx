@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { FaGithub, FaLinkedinIn, FaTwitter, FaDribbble } from 'react-icons/fa'
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger)
@@ -69,7 +70,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="font-body text-primary/70 text-sm leading-relaxed max-w-xs mb-8">
-              Crafting performant, beautiful web experiences with modern technologies. Available for freelance projects and full-time roles.
+              Passionate about building fast, beautiful web experiences with modern technologies. Open to freelance gigs and full-time roles.
             </p>
             {/* Status indicator */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
@@ -109,17 +110,24 @@ export default function Footer() {
             </a>
             <p className="font-body text-sm text-primary/60 mb-6">Based in <span className="font-medium text-primary">Kochi, Kerala</span></p>
             {/* Social icons */}
-            {/* <div className="flex gap-2">
-              {['GH', 'LI', 'TW', 'DR'].map((icon) => (
+            <div className="flex gap-2">
+              {[
+                { icon: <FaGithub size={15} />, href: 'https://github.com/yourusername', label: 'GitHub' },
+                { icon: <FaLinkedinIn size={15} />, href: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
+                { icon: <FaTwitter size={15} />, href: 'https://twitter.com/yourusername', label: 'Twitter' },
+              ].map(({ icon, href, label }) => (
                 <a
-                  key={icon}
-                  href="#"
-                  className="w-9 h-9 rounded-full border border-primary/20 flex items-center justify-center font-mono text-xs text-primary/60 hover:bg-primary hover:text-secondary hover:border-primary transition-all duration-300"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="w-9 h-9 rounded-full border border-primary/20 flex items-center justify-center text-primary/60 hover:bg-primary hover:text-secondary hover:border-primary transition-all duration-300"
                 >
                   {icon}
                 </a>
               ))}
-            </div> */}
+            </div>
           </div>
         </div>
 

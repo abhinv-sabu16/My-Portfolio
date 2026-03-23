@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --primary: #1C1F24;
+  --primary: #1b1e22;
   --secondary: #C96A4A;
   --font-display: 'Playfair Display', serif;
   --font-body: 'DM Sans', sans-serif;
